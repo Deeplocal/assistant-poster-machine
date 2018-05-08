@@ -1,0 +1,7 @@
+{
+  "device_location": "TEST",
+  "device_location_info": "where is this device? used to differentiate between devices",
+  "redis_host": "127.0.0.1",
+  "redis_password": "Th1sISaToughP4ssw0rd2Crack!",
+  "redis_channel": "poster-messages"
+}

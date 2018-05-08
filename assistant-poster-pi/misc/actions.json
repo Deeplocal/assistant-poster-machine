@@ -1,0 +1,499 @@
+{
+  "manifest": {
+    "displayName": "Assistant SDK Poster Machine",
+    "invocationName": "Assistant SDK Poster Machine",
+    "category": "PRODUCTIVITY"
+  },
+  "actions": [
+    {
+      "name": "com.deeplocal.actions.new_poster",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "com.deeplocal.intents.new_poster",
+        "trigger": {
+          "queryPatterns": [
+            "let's make some art",
+            "let's make some art together",
+            "let's draw",
+            "start a new poster",
+            "new poster"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Ok, let me know what shape to start with"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "com.deeplocal.commands.new_poster"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "com.deeplocal.actions.draw_shape",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "com.deeplocal.intents.draw_shape",
+        "parameters": [
+          {
+            "name": "shape_type",
+            "type": "ShapeType"
+          }
+        ],
+        "trigger": {
+          "queryPatterns": [
+            "start with $ShapeType:shape_type",
+            "draw $ShapeType:shape_type",
+            "dry $ShapeType:shape_type",
+            "drop $ShapeType:shape_type",
+            "drug $ShapeType:shape_type",
+            "switch to $ShapeType:shape_type"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Okay, drawing $shape_type.raw"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "com.deeplocal.commands.draw_shape",
+                  "params": {
+                    "shape": "$shape_type"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "com.deeplocal.actions.draw_color_shape",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "com.deeplocal.intents.draw_color_shape",
+        "parameters": [
+          {
+            "name": "color_type",
+            "type": "ColorType"
+          },
+          {
+            "name": "shape_type",
+            "type": "ShapeType"
+          }
+        ],
+        "trigger": {
+          "queryPatterns": [
+            "$ColorType:color_type $ShapeType:shape_type",
+            "start with $ColorType:color_type $ShapeType:shape_type",
+            "draw $ColorType:color_type $ShapeType:shape_type",
+            "dry $ColorType:color_type $ShapeType:shape_type",
+            "drop $ColorType:color_type $ShapeType:shape_type",
+            "drug $ColorType:color_type $ShapeType:shape_type",
+            "switch to $ColorType:color_type $ShapeType:shape_type"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Okay, drawing $color_type.raw $shape_type.raw"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "com.deeplocal.commands.draw_color_shape",
+                  "params": {
+                    "color": "$color_type",
+                    "shape": "$shape_type"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "com.deeplocal.actions.use_color",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "com.deeplocal.intents.use_color",
+        "parameters": [
+          {
+            "name": "color_type",
+            "type": "ColorType"
+          }
+        ],
+        "trigger": {
+          "queryPatterns": [
+            "$ColorType:color_type",
+            "use $ColorType:color_type",
+            "make it $ColorType:color_type",
+            "draw with $ColorType:color_type",
+            "dry with $ColorType:color_type",
+            "drop with $ColorType:color_type",
+            "sketch with $ColorType:color_type",
+            "switch to $ColorType:color_type"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Okay, I'll use $color_type.raw"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "com.deeplocal.commands.use_color",
+                  "params": {
+                    "color": "$color_type"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "com.deeplocal.actions.random",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "com.deeplocal.intents.random",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "new color",
+            "change colors",
+            "random",
+            "randomize",
+            "change it up",
+            "switch",
+            "draw something different",
+            "draw something random",
+            "make it different"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Sure, I'll change it up"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "com.deeplocal.commands.random",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "com.deeplocal.actions.change_size",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "com.deeplocal.intents.change_size",
+        "parameters": [
+          {
+            "name": "size_type",
+            "type": "SizeType"
+          }
+        ],
+        "trigger": {
+          "queryPatterns": [
+            "make it $SizeType:size_type",
+            "$SizeType:size_type",
+            "draw $SizeType:size_type"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "$size_type.raw it is"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "com.deeplocal.commands.change_size",
+                  "params": {
+                    "size": "$size_type"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "com.deeplocal.actions.stripes",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "com.deeplocal.intents.stripes",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "use stripes",
+            "draw stripes",
+            "draw lines",
+            "add lines",
+            "add stripes",
+            "make it striped"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here are some stripes"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "com.deeplocal.commands.stripes",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "com.deeplocal.actions.finished",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "com.deeplocal.intents.finished",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "i'm done",
+            "i'm finished",
+            "all done",
+            "stop",
+            "quit",
+            "that's enough"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Okay, I'll wrap it up"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "com.deeplocal.commands.finished",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "$ColorType",
+      "entities": [
+        {
+          "key": "green",
+          "synonyms": [ "green" ]
+        },
+        {
+          "key": "blue",
+          "synonyms": [ "blue" ]
+        },
+        {
+          "key": "red",
+          "synonyms": [ "red" ]
+        },
+        {
+          "key": "orange",
+          "synonyms": [ "orange" ]
+        },
+        {
+          "key": "purple",
+          "synonyms": [ "purple" ]
+        }
+      ]
+    },
+    {
+      "name": "$ShapeType",
+      "entities": [
+        {
+          "key": "circle",
+          "synonyms": [ "circle", "circles", "something round" ]
+        },
+        {
+          "key": "triangle",
+          "synonyms": [ "triangle", "triangles", "three sided polygon" ]
+        },
+        {
+          "key": "square",
+          "synonyms": [ "square", "squares", "four sided polygon" ]
+        },
+        {
+          "key": "rhombus",
+          "synonyms": [ "rhombus", "askew square" ]
+        },
+        {
+          "key": "parallelogram",
+          "synonyms": [ "parallelogram" ]
+        },
+        {
+          "key": "hexagon",
+          "synonyms": [ "hexagon", "hexagons", "six sided polygon" ]
+        },
+        {
+          "key": "octagon",
+          "synonyms": [ "octagon", "octagons", "eight sided polygon" ]
+        },
+        {
+          "key": "decagon",
+          "synonyms": [ "decagon", "decagons", "ten sided polygon" ]
+        },
+        {
+          "key": "diamond",
+          "synonyms": [ "diamond", "diamonds" ]
+        },
+        {
+          "key": "heptagon",
+          "synonyms": [ "heptagon", "heptagons", "seven sided polygon" ]
+        },
+        {
+          "key": "t-shape",
+          "synonyms": [ "t shape", "T", "tee", "tees" ]
+        },
+        {
+          "key": "nonagon",
+          "synonyms": [ "nonagon", "nonagons", "nine sided polygon" ]
+        },
+        {
+          "key": "pentagon",
+          "synonyms": [ "pentagon", "pentagons", "five sided polygon" ]
+        },
+        {
+          "key": "x",
+          "synonyms": [ "x shape", "X", "exes", "exit" ]
+        },
+        {
+          "key": "plus-sign",
+          "synonyms": [ "plus sign", "plus" ]
+        },
+        {
+          "key": "dodecagon",
+          "synonyms": [ "dodecagon", "twelve sided polygon" ]
+        },
+        {
+          "key": "rectangle",
+          "synonyms": [ "rectangle" ]
+        }
+      ]
+    },
+    {
+      "name": "$SizeType",
+      "entities": [
+        {
+          "key": "bigger",
+          "synonyms": [ "big", "bigger", "larger" ]
+        },
+        {
+          "key": "smaller",
+          "synonyms": [ "small", "smaller" ]
+        }
+      ]
+    }
+  ]
+}
