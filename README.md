@@ -4,6 +4,7 @@ May 2018
 * * *
 ## **Bill of Materials**
 Assembly Time: 8 - 10 Hours
+
 Approximate Cost: $247.16
 
 <table>
@@ -164,19 +165,25 @@ Before assembling the two major printed components, load each cylinder of the ch
 Join the lower and upper assemblies with a .25" metal shaft, which runs through the two flanged bearings contained in the upper assembly. Then, place a GT2 pulley on top to provide power from the Z-axis motor. 
         
 ### Assemble Core XY Machine
+
 * Cut rail to length
+
 The gantry movement depends on the two lengths of MakerSlide, one for the x-dimension and one for the y-dimension. For the x-dimension, cut one length of MakerSlide that is 16" long. For the y- dimension, cut another piece of MakerSlide that is 22" long. The ends of each piece have two holes in the center of the rails. Tap the holes on each of these ends with an M5 tap to be able to attach the motors and pen turret.
+
 * Assemble the center bearing hub.
 
 ![](/photos/photo4.jpg)
 
 * The center bearing hub will move along the x-rail and hold the y-rail.  
+
 To assemble the bearing hub, install four smooth idler pulleys on the top side of the lower plate. Next, install four V-wheels on the underside of the bottom plate so it can travel along the x-rail. Place eccentric spacers in the larger holes on the bottom plate and attach the wheels with M5 screws through the eccentric spacers. Simply insert screws into the slightly smaller holes to attach the other two wheels. Install 4 V-wheels on the top side of the upper plate for the y-rail to travel through, again using eccentric spacers for two of the wheels. Using M3 screws and 20mm M3 standoffs, connect the top and bottom plates together to complete the center bearing hub. Slide the center bearing hub onto a length of the MakerSlide to verify the preload and make adjustments by rotating the eccentric spacers.   
+
 * Prep Rail Sub- Assemblies
 
 ![](/photos/photo6.jpg)
 
 Tap the four small holes, which surround the large hole in the top of each motor bracket using an M5 tap. Attach a motor bracket to one side of the 16" length of MakerSlide, then slide it through the wheels on the bottom of the center bearing hub, and fasten another motor bracket to the other side.  Slip the pen turret assembly onto either end of the 22" length of MakerSlide and mark the locations for two M3 retention screws in the slots on each side. Drill a hole in each location and bore it with an M3 tap.
+
 **Install Motors and Belt System**
 
 ![](/photos/photo9.jpg)
