@@ -184,7 +184,7 @@ To assemble the bearing hub, install four smooth idler pulleys on the top side o
 
 Tap the four small holes, which surround the large hole in the top of each motor bracket using an M5 tap. Attach a motor bracket to one side of the 16" length of MakerSlide, then slide it through the wheels on the bottom of the center bearing hub, and fasten another motor bracket to the other side.  Slip the pen turret assembly onto either end of the 22" length of MakerSlide and mark the locations for two M3 retention screws in the slots on each side. Drill a hole in each location and bore it with an M3 tap.
 
-**Install Motors and Belt System**
+### Install Motors and Belt System
 
 ![](/photos/photo9.jpg)
 
@@ -222,8 +222,11 @@ $131=100.000
 ```
 ## **Software**
 There are three high-level components to the Assistant Poster Makers' software system that interact to create dynamic drawing output from speech input.
+
 The poster art is generated in a browser using [Paper.js](http://paperjs.org/), a vector graphics scripting framework. It offers complex drawing functionality such as offsets, scaling, and intersections for simple shape manipulation.
+
 Google's Assistant SDK library for Python enables a conversational user interface for the machine. By leveraging custom device actions, we can control physical actions via pre-defined voice commands without having to leave the Google Assistant context.
+
 A Node.js application running an Express web server acts as the "glue" for the system. Redis Pub/Sub is used as a messaging channel between the Python application and the Express server, and WebSockets are used for pushing data between that server and the frontend client. The Node.js app also uses a custom library to convert SVG (exported from Paper.js) to Gcode (runs on Grbl CNC controller).
 
 ![](/photos/diagram.jpg)
