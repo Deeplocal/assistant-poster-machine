@@ -1,0 +1,12 @@
+{
+  "name": "svg-to-gcode-node",
+  "version": "0.0.1",
+  "description": "Converts SVG to Gcode",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Oscar Prom",
+  "license": "ISC",
+  "dependencies": {
+    "xml2js": "^0.4.19"
+  }
+}
