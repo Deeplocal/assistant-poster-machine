@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Drawing with Assistant</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500" rel="stylesheet">
+  <link href="/css/live.css" media="all" rel="stylesheet">
+  <link rel="stylesheet" href="/css/animate.min.css">
+</head>
+
+<body>
+  <img id="io-overlay" src="../img/UI-elements/ui-overlay-2.png"/>
+
+  <div id="left-container">
+    <canvas id="paper-canvas" width="600" height="400" resize></canvas>
+    <div id="current-query"></div>
+    <div id="modifier-cloud"></div>
+  </div>
+
+  <div id="right-container">
+    <video id="video-element" autoplay="true"></video>
+  </div>
+
+  <div id="oldShapes"></div>
+
+  <script media="all" src="/js/jquery-1.12.0.min.js"></script>
+  <script media="all" src="/js/paperjs-v0.11.5/paper-core.min.js"></script>
+  <script media="all" src="/js/jquery.lettering.js"></script>
+  <script media="all" src="/js/jquery.textillate.js"></script>
+
+  <script media="all" src="/js/globals.js"></script>
+  <script media="all" src="/js/grid.js"></script>
+  <script media="all" src="/js/primitive.js"></script>
+  <script media="all" src="/js/svgLoader.js"></script>
+  <script media="all" src="/js/live.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+$SCREEN_WIDTH: 1920px;
+$SCREEN_HEIGHT: 1080px;
+
+$GRAY: #3e3e3e;
+
+body {
+	margin: 0;
+	overflow: hidden;
+	font-family: Roboto, sans-serif;
+	color: $GRAY;
+	cursor: none;
+
+	img#io-overlay {
+    	position: fixed;
+    	z-index: 2;
+	}
+
+	div#left-container {
+		width: $SCREEN_WIDTH / 2;
+		height: $SCREEN_HEIGHT;
+		position: absolute;
+		left: 0;
+		top: 0;
+		text-align: center;
+
+		/*background: blue;*/
+
+		canvas#paper-canvas {
+			width: 450px;
+			height: 300px;
+			margin-top: 190px;
+
+			/*background: red;*/
+		}
+
+		div#current-query {
+			$thisPadding: 100px;
+			$thisFontSize: 80px;
+			$thisLineHeight: 1.25;
+
+			height: $thisFontSize * $thisLineHeight * 2;
+			padding-left: $thisPadding;
+			padding-right: $thisPadding;
+			line-height: $thisLineHeight;
+			font-size: $thisFontSize;
+			font-weight: 300;
+
+			/*background-color: orange;*/
+ 		}
+
+		div#modifier-cloud {
+			$thisPadding: 100px;
+			$thisFontSize: 42px;
+			$thisLineHeight: 1.25;
+
+			height: $thisFontSize * $thisLineHeight * 3;
+			padding-left: $thisPadding;
+			padding-right: $thisPadding;
+			line-height: $thisLineHeight;
+			font-size: $thisFontSize;
+			font-weight: 300;
+
+			margin-top: 150px;
+
+			display: -webkit-flex;
+			-webkit-flex-direction: row-reverse;
+			display: flex;
+			flex-direction: row-reverse;
+
+			img {
+				height: 125px;
+			}
+		}
+	}
+
+	div#right-container {
+
+		width: $SCREEN_WIDTH / 2; // 960px
+		height: $SCREEN_HEIGHT; // 1080px
+		position: absolute;
+		left: $SCREEN_WIDTH / 2;
+		top: 0;
+		/*overflow: hidden;*/
+		/*background-image: url("../img/UI-elements/Topdown_drawingmachine.png");*/
+
+		video {
+			width: 100%;
+			position: absolute;
+			top: 64px;
+			left: 0;
+			transform: rotate(180deg);
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "name": "assistant-poster-node",
+  "description": "A Google Assistant-powered poster maker",
+  "version": "0.0.1",
+  "license": "ISC",
+  "author": "oscar@deeplocal.com",
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "4.15.4",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "redis": "^2.8.0",
+    "svg-to-gcode-node": "file:../svg-to-gcode-node",
+    "ws": "^5.1.1"
+  }
+}

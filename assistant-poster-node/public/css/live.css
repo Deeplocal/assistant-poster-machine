@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  color: #3e3e3e;
+  cursor: none; }
+  body img#io-overlay {
+    position: fixed;
+    z-index: 2; }
+  body div#left-container {
+    width: 960px;
+    height: 1080px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    /*background: blue;*/ }
+    body div#left-container canvas#paper-canvas {
+      width: 450px;
+      height: 300px;
+      margin-top: 190px;
+      /*background: red;*/ }
+    body div#left-container div#current-query {
+      height: 200px;
+      padding-left: 100px;
+      padding-right: 100px;
+      line-height: 1.25;
+      font-size: 80px;
+      font-weight: 300;
+      /*background-color: orange;*/ }
+    body div#left-container div#modifier-cloud {
+      height: 157.5px;
+      padding-left: 100px;
+      padding-right: 100px;
+      line-height: 1.25;
+      font-size: 42px;
+      font-weight: 300;
+      margin-top: 150px;
+      display: -webkit-flex;
+      -webkit-flex-direction: row-reverse;
+      display: flex;
+      flex-direction: row-reverse; }
+      body div#left-container div#modifier-cloud img {
+        height: 125px; }
+  body div#right-container {
+    width: 960px;
+    height: 1080px;
+    position: absolute;
+    left: 960px;
+    top: 0;
+    /*overflow: hidden;*/
+    /*background-image: url("../img/UI-elements/Topdown_drawingmachine.png");*/ }
+    body div#right-container video {
+      width: 100%;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      transform: rotate(180deg); }
+
+/*# sourceMappingURL=live.css.map */

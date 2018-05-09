@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 586 586"><defs><style>.cls-1{fill:none;stroke:red;stroke-miterlimit:10;stroke-width:10px;}</style></defs><title>square-border-0</title><g id="Layer_2" data-name="Layer 2"><g id="Squares">
+<rect class="cls-1" x="5" y="5" width="576" height="576"/>
+<rect class="cls-1" x="41" y="41" width="504" height="504"/>
+<polygon class="cls-1" points="77 509 77 77 293 77 293 167 293 77 509 77 509 293 419 293 509 293 509 509 77 509"/>
+<polygon class="cls-1" points="329 473 329 383 257 383 257 473 113 473 113 329 203 329 203 257 113 257 113 113 257 113 257 203 329 203 329 113 473 113 473 257 383 257 383 329 473 329 473 473 329 473"/>
+<path class="cls-1" d="M221,221H149V149h72Zm216-72H365v72h72ZM221,365H149v72h72Zm216,0H365v72h72ZM347,239H239V347H347Z"/></g></g></svg>

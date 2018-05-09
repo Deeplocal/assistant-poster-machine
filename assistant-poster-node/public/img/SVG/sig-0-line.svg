@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.95605" height="41.91484" viewBox="0 0 26.95605 41.91484">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #010101;
+        stroke-width: 0.5px;
+      }
+    </style>
+  </defs>
+  <title>sig-0-line</title>
+  <path class="a" d="M.25,20.98833Q.25.25,13.478.25t13.228,20.73833q0,13.50618-5.87226,18.2967A11.22648,11.22648,0,0,1,13.478,41.66484Q.25,41.66484.25,20.98833Z"/>
+</svg>

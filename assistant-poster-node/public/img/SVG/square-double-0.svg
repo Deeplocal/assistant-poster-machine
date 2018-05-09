@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 946 586"><defs><style>.cls-1{fill:none;stroke:red;stroke-miterlimit:10;stroke-width:10px;}</style></defs><title>square-double-0</title>
+<g id="Layer_2" data-name="Layer 2">
+<g id="Squares">
+<rect class="cls-1" x="5" y="5" width="936" height="576"/>
+<rect class="cls-1" x="41" y="41" width="864" height="504"/>
+<rect class="cls-1" x="77" y="77" width="792" height="432"/>
+<rect class="cls-1" x="113" y="113" width="720" height="360"/>
+<path class="cls-1" d="M149,149V437H797V149ZM365,365H221V221H365Zm360,0H581V221H725Z"/>
+</g></g></svg>

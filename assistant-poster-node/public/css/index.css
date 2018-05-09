@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: Roboto; }
+  body div#controls {
+    margin-bottom: 12px; }
+  body canvas {
+    width: 550px;
+    height: 870px;
+    background: url(../img/PosterMaker_PosterDesign_Patterns_APR24_Green.png);
+    background-size: cover;
+    border: 2px solid black; }

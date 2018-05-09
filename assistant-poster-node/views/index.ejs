@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assistant Poster Maker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500" rel="stylesheet">
+    <link href="/css/index.css" media="all" rel="stylesheet">
+  </head>
+  <body>
+    <center>
+      <h1>Google Assistant-Powered Poster Maker</h1>
+      <div id="controls">
+        <button id="btn-next-shape">Next Shape</button>
+        <button id="btn-fill-contour">Fill Contour</button>
+        <button id="btn-clear">Clear</button>
+        <br><br>
+        <input type="radio" name="color" value="green" checked="checked"> Green </input>
+        <input type="radio" name="color" value="blue"> Blue </input>
+        <input type="radio" name="color" value="red"> Red </input>
+        <input type="radio" name="color" value="orange"> Orange </input>
+        <input type="radio" name="color" value="purple"> Purple </input>
+        <br>
+        <input type="radio" name="shape" value="circle" checked="checked"> Circle </input>
+        <input type="radio" name="shape" value="square"> Square </input>
+        <input type="radio" name="shape" value="triangle"> Triangle </input>
+        <br>
+        <input type="radio" name="size" value="small"> Small </input>
+        <input type="radio" name="size" value="medium" checked="checked"> Medium </input>
+        <input type="radio" name="size" value="large"> Large </input>
+        <br>
+        <input type="radio" name="style" value="random-primitive" checked = "checked"> Random Primitive </input>
+        <input type="radio" name="style" value="striped"> Striped </input>
+        <br>
+        <input type="radio" name="extra" value="rhombus"> Rhombus </input>
+        <input type="radio" name="extra" value="parallelogram"> Parallelogram </input>
+        <input type="radio" name="extra" value="hexagon"> Hexagon </input>
+        <input type="radio" name="extra" value="octagon"> Octagon </input>
+        <input type="radio" name="extra" value="decagon"> Decagon </input>
+        <input type="radio" name="extra" value="diamond"> Diamond </input>
+        <input type="radio" name="extra" value="heptagon"> Heptagon </input>
+        <input type="radio" name="extra" value="t-shape"> T-shape </input>
+        <input type="radio" name="extra" value="nonagon"> Nonagon </input>
+        <input type="radio" name="extra" value="pentagon"> Pentagon </input>
+        <input type="radio" name="extra" value="x"> X-shape </input>
+        <input type="radio" name="extra" value="plus-sign"> Plus Sign </input>
+        <input type="radio" name="extra" value="dodecagon"> Dodecagon </input>
+        <input type="radio" name="extra" value="rectangle"> Rectangle </input>
+        <input type="radio" name="extra" value="none" checked = "checked"> None </input>
+        <br>
+      </div>
+      <canvas id="paper-canvas" resize></canvas>
+    </center>
+
+    <script media="all" src="/js/jquery-1.12.0.min.js"></script>
+    <script media="all" src="/js/paperjs-v0.11.5/paper-core.min.js"></script>
+    <script media="all" src="/js/globals.js"></script>
+    <script media="all" src="/js/grid.js"></script>
+    <script media="all" src="/js/primitive.js"></script>
+    <script media="all" src="/js/svgLoader.js"></script>
+    <script media="all" src="/js/index.js"></script>
+  </body>
+</html>
