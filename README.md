@@ -279,5 +279,5 @@ A Node.js application running an Express web server acts as the "glue" for the s
     
 ## **Troubleshooting**
 * Ensure correct version of Grbl firmware
-* Ensure the correct serial device in the run() method in assistant-poster-pi/custom-assistant/_plotter_thread.py
+* Ensure the correct serial device in the `run()` method in `assistant-poster-pi/custom-assistant/_plotter_thread.py`
 * [Troubleshooting the Google Assistant Library](https://developers.google.com/assistant/sdk/guides/library/troubleshooting)
