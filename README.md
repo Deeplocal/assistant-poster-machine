@@ -5,7 +5,7 @@ May 2018
 ## **Bill of Materials**
 Assembly Time: 8 - 10 Hours
 
-Approximate Cost: $247.16
+Approximate Cost: $287.83
 
 <table>
   <tr>
@@ -136,6 +136,30 @@ Approximate Cost: $247.16
     <td>100</td>
     <td>$12.56</td>
   </tr>
+  <tr>
+    <td>USB Audio Card</td>
+    <td>https://www.amazon.com/UGREEN-External-Headphone-Microphone-Desktops/dp/B01N905VOY/</td>
+    <td>1</td>
+    <td>8.69</td>
+    <td>1</td>
+    <td>$8.69</td>
+  </tr>
+  <tr>
+    <td>3.5mm Microphone</td>
+    <td>https://www.amazon.com/Conference-Microphone-FOKEY-Computers-Omnidirectional/dp/B075RWPHCQ/</td>
+    <td>1</td>
+    <td>19.99</td>
+    <td>1</td>
+    <td>$19.99</td>
+  </tr>
+  <tr>
+    <td>Speakers</td>
+    <td>https://www.amazon.com/Earise-AL-101-Computer-Speakers-Powered/dp/B00CXLCMGY/</td>
+    <td>1</td>
+    <td>11.99</td>
+    <td>1</td>
+    <td>$11.99</td>
+  </tr>
 </table>
 
 ## Assembly Instructions
@@ -229,9 +253,8 @@ Google's Assistant SDK library for Python enables a conversational user interfac
 
 A Node.js application running an Express web server acts as the "glue" for the system. Redis Pub/Sub is used as a messaging channel between the Python application and the Express server, and WebSockets are used for pushing data between that server and the frontend client. The Node.js app also uses a custom library to convert SVG (exported from Paper.js) to Gcode (runs on Grbl CNC controller).
 
-![](/photos/diagram.jpg)
+![images/system-diagram "System Diagram"](/photos/diagram.jpg)
 
-Poster Art Generation = Paper.js > (websockets) > Node.js Express server + SVG to GCode library > (redis) > Multi-threaded python applicaion = Assistant + Grbl control
 1. Download and install "Raspbian Stretch with Desktop" from the Raspberry Pi [downloads page](https://www.raspberrypi.org/downloads/raspbian/)
 2. Open a terminal window and clone the repository in the home (/home/pi) directory
 3. Set up Redis
@@ -244,16 +267,20 @@ Poster Art Generation = Paper.js > (websockets) > Node.js Express server + SVG t
     * Start application: $ npm start
 5. Set up Python module
     * Follow all steps in the [Embed the Google Assistant guide](https://developers.google.com/assistant/sdk/guides/library/python/embed/setup) to configure audio, create a developer project, register the device model, and run the sample code
+        * Replace assistant-poster-pi/misc/credentials.json with your resulting credentials file
+        * Replace PROJECT_ID with your project ID in assistant-poster-pi/misc/deploy-actions-package.sh
+        * Replace ASSISTANT_DEVICE_ID with your device ID in the contructor of assistant-poster-pi/custom-assistant/_assistant_thread.py
     * Deploy action package $ cd misc; ./deploy-action-package.sh
-    * Install dependencies [todo use requirements.txt]: $ python -m pip install -r requirements [todo: test this]
+    * Install dependencies: $ python -m pip install pymysql pyserial redis
 6. Run the system
     * Start Redis server: $ redis-server redis.conf
-    * Start Python module: $ python -um custom-assistant
+    * Activate the virtual environment and start Python module: $ source env/bin/activate; python -um custom-assistant
     * Start Node.js module $ npm start
-    * Open frontend in browser
+    * Open [frontend](http://127.0.0.1:8080) in browser
     * Speak commands to start generating poster
     * Stop with Ctrl+C
     
 ## **Troubleshooting**
-* Ensure correct version of Grbl firmware (reflash?)
+* Ensure correct version of Grbl firmware
+* Ensure the correct serial device in the run() method in assistant-poster-pi/custom-assistant/_plotter_thread.py
 * [Troubleshooting the Google Assistant Library](https://developers.google.com/assistant/sdk/guides/library/troubleshooting)
