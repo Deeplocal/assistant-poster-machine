@@ -256,7 +256,7 @@ A Node.js application running an Express web server acts as the "glue" for the s
 ![System Diagram](/images/system-diagram.jpeg)
 
 1. Download and install "Raspbian Stretch with Desktop" from the Raspberry Pi [downloads page](https://www.raspberrypi.org/downloads/raspbian/)
-2. Connect the Pi to your network and SSH into the device: `$ ssh pi@<IP_ADDRESS>`
+2. Connect the Pi to your network and SSH into the device: `$ ssh pi@IP_ADDRESS`
 3. Clone the repository in the home (/home/pi) directory: `$ git clone https://github.com/Deeplocal/assistant-poster-machine.git`
 4. Change directory: `$ cd assistant-poster-machine`
 5. Set up Redis: See [Redis Quick Start](https://redis.io/topics/quickstart)
@@ -265,12 +265,12 @@ A Node.js application running an Express web server acts as the "glue" for the s
     * Install application dependencies: `$ cd assistant-poster-node; npm install`
 7. Set up Python module
     * Follow all steps in the [Embed the Google Assistant guide](https://developers.google.com/assistant/sdk/guides/library/python/embed/setup) to configure audio, create a developer project, register the device model, and run the sample code
-        * Replace assistant-poster-pi/misc/credentials.json with your resulting credentials file
-        * Replace PROJECT_ID with your project ID in assistant-poster-pi/misc/deploy-actions-package.sh
-        * Replace ASSISTANT_DEVICE_ID with your device ID in the contructor of assistant-poster-pi/custom-assistant/_assistant_thread.py
+        * Replace `assistant-poster-pi/misc/credentials.json` with your resulting credentials file
+        * Replace PROJECT_ID with your project ID in `assistant-poster-pi/misc/deploy-actions-package.sh`
+        * Replace ASSISTANT_DEVICE_ID with your device model ID in the contructor of `assistant-poster-pi/custom-assistant/_assistant_thread.py`
     * Deploy action package `$ cd misc; ./deploy-action-package.sh`
     * Activate virtual environment and install dependencies: `$ python -m pip install pymysql pyserial redis`
-8. Run the system (all relative to ~/assistant-poster-machine)
+8. Run the system (all relative to `~/assistant-poster-machine`)
     * Start Redis server: `$ cd assistant-poster-node; redis-server redis.conf`
     * Activate the virtual environment and start Python module: `$ source ../env/bin/activate; cd assistant-poster-pi; python -um custom-assistant`
     * Start Node.js module `$ cd assistant-poster-pi; npm start`
