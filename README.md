@@ -253,7 +253,7 @@ Google's Assistant SDK library for Python enables a conversational user interfac
 
 A Node.js application running an Express web server acts as the "glue" for the system. Redis Pub/Sub is used as a messaging channel between the Python application and the Express server, and WebSockets are used for pushing data between that server and the frontend client. The Node.js app also uses a custom library to convert SVG (exported from Paper.js) to Gcode (runs on Grbl CNC controller).
 
-![images/system-diagram "System Diagram"](/photos/diagram.jpg)
+![images/system-diagram.jpeg "System Diagram"](/photos/diagram.jpg)
 
 1. Download and install "Raspbian Stretch with Desktop" from the Raspberry Pi [downloads page](https://www.raspberrypi.org/downloads/raspbian/)
 2. Open a terminal window and clone the repository in the home (/home/pi) directory
